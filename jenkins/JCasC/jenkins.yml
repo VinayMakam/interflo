@@ -1,0 +1,14 @@
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+              description: "Secrets for gerrit jenkins user which allows publishing build status to gerrit."
+              id: "gerrit-jenkins-user"
+              username: "${JENKINS_USERNAME}"
+              password: "${JENKINS_PASSWORD}"
+              scope: GLOBAL
+
+unclassified:
+  location:
+    url: "${JENKINS_URL}"

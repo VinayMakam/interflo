@@ -1,0 +1,19 @@
+jobs:
+  - script: >
+      job("${JENKINS_JOB_DSL_SEED_NAME}") {
+        scm {
+          git {
+            remote {
+              url("http://gerrit:8080/a/${GERRIT_PROJECT_NAME}")
+              credentials('gerrit-jenkins-user')
+            }
+            branches('jenkins-configuration')
+          }
+        }
+        steps {
+          jobDsl {
+            targets('jobs/**/*.groovy')
+            ignoreMissingFiles(true)
+          }
+        }
+      }

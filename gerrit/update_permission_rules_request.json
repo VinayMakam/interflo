@@ -1,0 +1,18 @@
+{
+  "add": {
+    "GLOBAL_CAPABILITIES": {
+      "permissions": {
+        "checks-administrateCheckers": {
+          "rules": {
+            "Administrators": {
+              "action": "ALLOW"
+            },
+            "Non-Interactive Users": {
+              "action": "ALLOW"
+            }
+          }
+        }
+      }
+    }
+  }
+}
